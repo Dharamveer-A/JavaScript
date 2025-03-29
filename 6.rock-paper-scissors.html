@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Game</title>
+</head>
+<body>
+  <p>
+    Rock paper scissors
+  </p>
+  <button onclick="
+  rn=Math.random();
+  if(rn < 1/3){
+     alert(`You picked rock,computer also picked Rock,Tie\nwin:${count}`);
+  }else if(rn<=2/3){
+    alert(`You picked rock,computer picked Paper,You Loose\nwin:${count}`);
+  }else{
+    count++
+    alert(`You picked rock,computer picked Scissors,You win\nwin:${count}`);
+  }
+  console.log('Rock executed succesfully')
+  ">Rock</button>
+  <button onclick="
+  rn=Math.random();
+  if(rn < 1/3){
+    count++;
+     alert(`You picked Paper,computer picked Rock,You win\nwin:${count}`);
+  }else if(rn<=2/3){
+    alert(`You picked Paper,computer also picked Paper,Tie\nwin:${count}`);
+  }else{
+    alert(`You picked Paper,computer picked Scissors,You Loose\nwin:${count}`);
+  }
+  ">Paper</button>
+  <button onclick="
+  rn=Math.random();
+  if(rn < 1/3){
+    count++;
+     alert(`You picked Scissor,computer picked Rock,You Loose\nwin:${count}`);
+  }else if(rn<=2/3){
+    count++
+    alert(`You picked Scissor,computer picked Paper,You win\nwin:${count}`);
+  }else{
+    alert(`You picked Scissors,computer picked also Scissors,Tie\nwin:${count}`);
+  }
+  ">scissors</button>
+  <button onclick="count=0;
+  alert(`win:${count}`);
+  ">Reset Score</button>
+  <script>
+    var rn=0
+    var count=0;
+  </script>
+</body>
+</html>
