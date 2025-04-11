@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Coin toss</title>
+</head>
+<body>
+  <p>Rules <br> 1.Take the guess first <br>2.Toss the coil <br>3.If your guess right you win,otherwise you loose</p>
+  <button onclick="guess='head'">Head</button>
+  <button onclick="guess='tail'">Tail</button><br>
+  <button onclick="tossed()">toss</button><br>
+  <button onclick="win=0;alert(`score:${win}`)">Reset score</button>
+  <script>
+    win=0
+    var guess=''
+    function tossed(){
+      var com=Math.random();
+      var tos='tail'
+      if(com<=0.5)
+        tos='head'
+      if (tos===guess){
+        win++
+      alert(`Your guess is right, you win \n score:${win}`)
+    }
+      else
+      alert(`Yor guess is wrong, you loose  \n score:${win}`)
+
+    }
+  </script>
+</body>
+</html>
+
